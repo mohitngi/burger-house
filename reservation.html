@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Confirmation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="confirmation-message">
+        <h1>Reservation Confirmed!</h1><br>
+        <p id="reservation-details"></p><br>
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
+
+    <script>
+        // Retrieve the query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const date = urlParams.get('date');
+        const time = urlParams.get('time');
+        const email = urlParams.get('email');
+        const people = urlParams.get('people');
+
+        // Display the reservation details
+        document.getElementById('reservation-details').textContent = `Your reservation has been confirmed for ${date} at ${time}. We look forward to serving you!` ;
+    </script>
+</body>
+</html>
