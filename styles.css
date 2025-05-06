@@ -157,6 +157,8 @@ nav {
   display: grid;
   gap: 2rem;
   overflow: hidden;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }
 
 .header__image img {
@@ -189,12 +191,6 @@ nav {
 
 .header__content h1 span {
   font-size: 3rem;
-}
-
-.banner__container {
-  display: grid;
-  gap: 1rem;
-  grid-auto-rows: 200px;
 }
 
 .banner__card {
@@ -475,10 +471,10 @@ nav {
     color: var(--tertiary-color);
   }
 
-  .header__container {
+  /* .header__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-  }
+  } */
 
   .header__image {
     grid-area: 1/2/2/3;
