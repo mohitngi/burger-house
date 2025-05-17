@@ -193,12 +193,47 @@ nav {
   font-size: 3rem;
 }
 
+.banner__container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem 1rem;
+}
+
 .banner__card {
-  padding: 1rem;
+  padding: 2rem;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.banner__card:hover {
+  transform: translateY(-5px);
+}
+
+.banner__description {
+  color: var(--white);
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.banner__price {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.banner__price .original-price {
+  text-decoration: line-through;
+  color: var(--white);
+  opacity: 0.7;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
 }
 
 .banner__card:nth-child(1) {
@@ -735,4 +770,8 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none;
+}
+
+#special {
+  scroll-margin-top: 75px; /* Add space to account for fixed header */
 }
